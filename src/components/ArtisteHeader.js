@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Artiste = () => {
+const ArtisteHeader = () => {
     return (
         <div>
-            
+            Header
         </div>
     )
 }
 
-export default Artiste
+export default ArtisteHeader

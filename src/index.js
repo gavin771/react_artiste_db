@@ -4,14 +4,14 @@ import { BrowserRouter, Route } from 'react-router-dom'
 
 //COMPONENTS
 import Home from './components/Home'
-import Artiste from './components/Artiste'
+import SingleArtiste from './components/SingleArtiste'
 
 const App = () => {
     return (
         <BrowserRouter>
             <div>
                 <Route exact path="/" component={Home} />
-                <Route path="/artiste/:artisteId" component={Artiste} />
+                <Route path="/artiste/:artisteId" component={SingleArtiste} />
             </div>
         </BrowserRouter>
     )

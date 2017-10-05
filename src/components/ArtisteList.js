@@ -8,11 +8,12 @@ const ArtisteList = (props) => {
             return;
         }
         return data.map((artiste) => {
-            const style = {
+
+            const styles = {
                 background: `url("/images/covers/${artiste.cover}.jpg") no-repeat`
             }
             return (
-                <Link key={artiste.id} to={`/artiste/${artiste.id}`} className="artiste_link" style={style}>
+                <Link key={artiste.id} to={`/artiste/${artiste.id}`} className="artiste_link" style={styles}>
                     <div>{artiste.name}</div>
                 </Link>
             )
