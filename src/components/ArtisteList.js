@@ -1,11 +1,28 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const ArtisteList = (props) => {
-    console.log(props);
+
+    const list = ({ data }) => {
+        if (!data) {
+            return;
+        }
+        return data.map((artiste) => {
+            const style = {
+                background: `url("/images/covers/${artiste.cover}.jpg") no-repeat`
+            }
+            return (
+                <Link key={artiste.id} to={`/artiste/${artiste.id}`} className="artiste_link" style={style}>
+                    <div>{artiste.name}</div>
+                </Link>
+            )
+        })
+    }
 
     return (
-        <div>
-
+        <div className="artiste_list">
+            <h4>Browse the artistes</h4>
+            {list(props)}
         </div>
     )
 }
