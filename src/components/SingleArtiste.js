@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
 
-import ArtisteHeader from './ArtisteHeader.js'
+import ArtisteHeader from './ArtisteHeader'
+import AlbumList from './AlbumList'
 
 const API = 'http://localhost:3004/artistes'
 
 class SingleArtiste extends Component {
+
+    
     constructor(props) {
         super(props)
 
@@ -22,14 +25,13 @@ class SingleArtiste extends Component {
             .then(response => response.json())
             .then(json => {
                 this.setState({ artiste: json })
-                console.log(this.state)
             })
     }
 
     render() {
         return (
             <div>
-                <ArtisteHeader  />
+                <ArtisteHeader />
                 <div className="artiste_bio">
                     <div className="avatar">
                         <span style={{ background: `url("/images/covers/${this.state.artiste.cover}.jpg") no-repeat` }}></span>
@@ -38,6 +40,8 @@ class SingleArtiste extends Component {
                     <div className="bio_text">
                         {this.state.artiste.bio}
                     </div>
+
+                    <AlbumList albums={this.state.artiste.albums} />
                 </div>
             </div>
         )
