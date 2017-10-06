@@ -29,7 +29,16 @@ class SingleArtiste extends Component {
     render() {
         return (
             <div>
-                <ArtisteHeader data={}/>
+                <ArtisteHeader  />
+                <div className="artiste_bio">
+                    <div className="avatar">
+                        <span style={{ background: `url("/images/covers/${this.state.artiste.cover}.jpg") no-repeat` }}></span>
+                    </div>
+                    <h3>{this.state.artiste.name}</h3>
+                    <div className="bio_text">
+                        {this.state.artiste.bio}
+                    </div>
+                </div>
             </div>
         )
     }

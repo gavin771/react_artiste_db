@@ -2,9 +2,9 @@ import React from 'react'
 
 const ArtisteHeader = () => {
     return (
-        <div>
-            Header
-        </div>
+        <header>
+            Artiste DB
+        </header>
     )
 }
 

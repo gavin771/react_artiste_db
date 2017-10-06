@@ -67,3 +67,38 @@ padding:10px 30px;
     margin: 20px 0;
 }
 
+/** Artiste Single Page Header */
+header{
+    font-family:"Monoton";
+    font-size: 33px;
+    text-align: center;
+    border-bottom: 1px solid #a00909;
+    color: #949494
+}
+
+
+/** Artiste Bio Class */
+ .artiste_bio{
+     box-sizing: border-box;
+     padding: 10px 30px;
+ }
+
+ .artiste_bio .avatar span{
+     width: 130px;
+    height: 130px;
+    display: block;
+    margin: 0 auto;
+    background-size: cover !important;
+ }
+
+ .artiste_bio h3{
+     font-weight: 100;
+     text-align: center;
+     font-size: 30px;
+     margin: 10px 0
+ }
+
+.artiste_bio .bio_text{
+ font-weight: 100;
+ font-size: 14px;
+}
